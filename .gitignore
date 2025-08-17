@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+
+# Build artifacts
+build/
+artifacts/
+cache/
+
+# Environment variables
+.env
+
+# Remix IDE specific files
+remixd_token
+remixd_token_*
+
+# Hardhat files
+hardhat.config.js
+hardhat.config.ts
+
+# Foundry files
+foundry.toml
+forge-cache/
+forge-artifacts/
+
+# Truffle files
+truffle-config.js
+truffle-config.ts
+
+# Local development files
+*.swp
+*.swo
+*.swn
+*.DS_Store
+
+# Log files
+*.log
+
+# IDE specific files
+.idea/
+.vscode/
+*.iml
+
+# Personal notes and temporary files
+*.md
+*.tmp
