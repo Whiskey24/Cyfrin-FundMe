@@ -14,19 +14,21 @@ library PriceConverter {
      * Address: 0x694AA1769357215DE4FAC081bf1f309aDC325306
      */
 
+     // Feed on ZKsync 0x6D41d1dc818112880b40e26BD6FD347E41008eDA
+
     function getDataFeedVersion() internal view returns (uint256) {
         return
-            AggregatorV3Interface(0x694AA1769357215DE4FAC081bf1f309aDC325306)
+            AggregatorV3Interface(0x6D41d1dc818112880b40e26BD6FD347E41008eDA)
                 .version();
     }
 
     function getNormalizedPrice() internal view returns (uint256) {
         (, int256 price, , , ) = AggregatorV3Interface(
-            0x694AA1769357215DE4FAC081bf1f309aDC325306
+            0x6D41d1dc818112880b40e26BD6FD347E41008eDA
         ).latestRoundData();
         require(price > 0, "Invalid price");
         uint8 decimals = AggregatorV3Interface(
-            0x694AA1769357215DE4FAC081bf1f309aDC325306
+            0x6D41d1dc818112880b40e26BD6FD347E41008eDA
         ).decimals();
 
         // Scale the price to 18 decimals
